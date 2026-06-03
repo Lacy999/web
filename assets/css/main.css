@@ -20,8 +20,8 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #fff; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #fff; /* Color for headings, subheadings and title throughout the website */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #34b7a7; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -83,20 +83,20 @@ h3,
 h4,
 h5,
 h6 {
-  color: #fff;
+  color: var(--heading-color);
   font-family: var(--heading-font);
 }
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+.php-email-form .error-message {display: none !important;
+  visibility: hidden !important; /* 隱藏元素 */
+  opacity: 0 !important;          /* 變成完全透明 */
+  height: 0 !important;           /* 高度歸零 */
+  padding: 0 !important;          /* 內邊距歸零（消滅紅色大區塊） */
+  margin: 0 !important;           /* 外邊距歸零 */
+  border: none !important;        /* 拔掉任何邊框 */
+  font-size: 0 !important;        /* 字體縮小到不見 */
 }
 
 .php-email-form .sent-message {
@@ -637,7 +637,7 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: #fff;
+  color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 100px;
@@ -675,7 +675,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: #ffffff ;
   left: 0;
   right: 0;
   bottom: 0;
@@ -729,7 +729,7 @@ section,
 .hero p {
   margin: 10px 0 0 0;
   font-size: 24px;
-  color: var(--heading-color);
+  color: #000000 ;
 }
 
 .hero .btn-get-started {
@@ -1335,29 +1335,8 @@ section,
 
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
+  color:     @	  	   ��	  P � � �	U S B   C o r p o r a t i o n                               F l a s h   D i s k                                         "A A L 1 7 Y 9 L 0 M O Y T 2 8 8                                             
+    @ 	   ��	  P �@ �@ � �smiUSB     Flash Disk      1100                  =	 ��?�(2�� � (_   0P      �  f� H  �                DiR1107v1D ,    #{ � 14px;
 }
 
 .contact .info-item:hover i {
